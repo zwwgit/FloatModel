@@ -6,7 +6,7 @@
         speed: 100
     }
     var FloatModel = function (option) {
-        this.option = option ? defaultOption.concat(option) : defaultOption
+        this.option = option ? Object.assign(defaultOption,option) : defaultOption
         this.el = doc.querySelector(this.option.el)
         this.el.style.position = 'fixed'
         this.el.style.left = '0px'
